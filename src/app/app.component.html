@@ -1,1 +1,38 @@
+<nav class="flex items-center justify-start bg-gray-800 px-5 py-3 text-white font-semibold gap-8">
+  <a routerLink="/" class="flex items-center">
+    <img src="assets/logo2.png" alt="TechStore Logo" class="h-10 w-auto" />
+  </a>
+
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" 
+     class="text-cyan-400 hover:text-cyan-300 text-lg no-underline">
+    Home
+  </a>
+
+  <a routerLink="/products" routerLinkActive="active" 
+     class="text-cyan-400 hover:text-cyan-300 text-lg no-underline">
+    Products
+  </a>
+
+  <a routerLink="/about" routerLinkActive="active" 
+     class="text-cyan-400 hover:text-cyan-300 text-lg no-underline">
+    About
+  </a>
+
+  <div class="ml-auto flex items-center gap-4 text-lg">
+    <div class="flex items-center gap-2">
+      <span>📞</span>
+      <span>+961 71 273883</span>
+    </div>
+
+    <a routerLink="/cart" class="relative text-cyan-400 hover:text-cyan-300 font-semibold no-underline">
+      🛒 Cart
+      <span
+        class="absolute -top-2 -right-3 bg-red-600 text-white text-xs px-1.5 rounded-full font-bold"
+      >
+        {{ cartItems.length }}
+      </span>
+    </a>
+  </div>
+</nav>
+
 <router-outlet></router-outlet>

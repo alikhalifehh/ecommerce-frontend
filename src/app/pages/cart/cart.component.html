@@ -1,0 +1,21 @@
+<div class="min-h-screen w-full bg-gradient-to-br from-[#161E2F] via-[#384358] to-[#B51A2B] p-6  ">
+  <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md mt-8">
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Your Cart</h2>
+    <ul class="divide-y divide-gray-200">
+      <li *ngFor="let item of cartItems" class="py-4 flex items-center gap-4">
+        <img
+          [src]="item.images[0]?.src"
+          alt="{{ item.name }}"
+          class="w-16 h-16 object-contain rounded"
+        />
+        <div class="flex-1">
+          <span class="block text-gray-700 font-medium">{{ item.name }}</span>
+          <span class="text-teal-600 font-semibold">${{ item.price }} USD</span>
+        </div>
+      </li>
+    </ul>
+    <div *ngIf="cartItems.length === 0" class="text-center text-gray-500 mt-6">
+      Your cart is empty.
+    </div>
+  </div>
+</div>
