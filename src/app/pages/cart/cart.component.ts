@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
+import { ProductContract } from 'src/app/core/contracts/product.contract';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector:'app-cart',
   templateUrl:'./cart.component.html'
 })
 export class CartComponent implements OnInit {
-  cartItems:any[]=[];
+  cartItems:ProductContract[]=[];
 
   constructor(private cartService: CartService) {}
 

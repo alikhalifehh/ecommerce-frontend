@@ -4,13 +4,13 @@
     <ul class="divide-y divide-gray-200">
       <li *ngFor="let item of cartItems" class="py-4 flex items-center gap-4">
         <img
-          [src]="item.images[0]?.src"
-          alt="{{ item.name }}"
+          [src]="item.image"
+          alt="{{ item.title }}"
           class="w-16 h-16 object-contain rounded"
         />
         <div class="flex-1">
-          <span class="block text-gray-700 font-medium">{{ item.name }}</span>
-          <span class="text-teal-600 font-semibold">${{ item.price }} USD</span>
+          <span class="block text-gray-700 font-medium">{{ item.title }}</span>
+          <span class="text-teal-600 font-semibold">${{ item.description }} USD</span>
         </div>
       </li>
     </ul>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service'; // Fixed import path
+import { CartService } from 'src/app/core/services/cart.service'; // Fixed import path
 
 @Component({
   selector: 'app-root',

@@ -7,11 +7,11 @@ Download and install Git here: https://git-scm.com/downloads
 XAMPP: A local web server package that includes Apache (web server) and MySQL (database server), used to run your WordPress + WooCommerce backend locally.
 Download and install XAMPP here: https://www.apachefriends.org/index.html
 
-Node.js and npm: Required to run Angular commands and install dependencies.
+Node.js(v22) and npm (v10.9): Required to run Angular commands and install dependencies.
 Download and install Node.js here: https://nodejs.org/
 
-Angular CLI: Command line interface for Angular projects.
-Install globally by running this command in your terminal or command prompt and run npm install -g @angular/cli
+Angular CLI(v16.2.16): Command line interface for Angular projects.
+Install globally by running this command in your terminal or command prompt and run npm install -g @angular/cli@16.2.16
 
 Steps to Run:
 1- Set up backend server (WooCommerce API):
