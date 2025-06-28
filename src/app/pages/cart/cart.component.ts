@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html'
+  selector:'app-cart',
+  templateUrl:'./cart.component.html'
 })
 export class CartComponent implements OnInit {
-  cartItems: any[] = [];
+  cartItems:any[]=[];
 
   constructor(private cartService: CartService) {}
 
   ngOnInit() {
     this.cartService.cartItems$.subscribe(items => {
-      this.cartItems = items;
+      this.cartItems=items;
     });
   }
 }

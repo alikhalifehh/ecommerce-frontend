@@ -8,38 +8,36 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  products: any[] = [];
-  cartItems: any[] = [];
-  isLoading = false;
+  products: any[]=[];
+  cartItems: any[]=[];
+  isLoading=false;
 
   constructor(
-    private wooService: WoocommerceService,
-    private cartService: CartService,
-    private snackBar: MatSnackBar
+    private wooService:WoocommerceService,
+    private cartService:CartService,
+    private snackBar:MatSnackBar
   ) {}
 
   ngOnInit(): void {
-    this.isLoading = true;
-    this.wooService.getProducts().subscribe((data: any) => {
-      console.log('API response:', data);
-      this.products = data;
-      this.isLoading = false;
-    });
+    this.isLoading=true;
+    this.wooService.getProducts().subscribe((data:any)=>{
+      console.log('API response:',data);
+      this.products=data;
+      this.isLoading=false;
+    }); 
 
     
-    this.cartService.cartItems$.subscribe(items => {
-      this.cartItems = items;
+    this.cartService.cartItems$.subscribe(items=>{
+      this.cartItems=items;
     });
   }
-
-  
-  addToCart(product: any) {
+  addToCart(product:any) {
     this.cartService.addToCart(product);
-    console.log('Added to cart:', product.name);
+    console.log('Added to cart:',product.name);
     this.snackBar.open(`${product.name} added to cart!`, 'Close', {
-      duration: 3000,
-      horizontalPosition: 'right',
-      verticalPosition: 'top',
+      duration:3000,
+      horizontalPosition:'right',
+      verticalPosition:'top',
     });
   }
 }

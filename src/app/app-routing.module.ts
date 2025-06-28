@@ -4,10 +4,10 @@ import { ProductsComponent } from './pages/products/products.component';
 import { LandingComponent } from './landing/landing.component';
 import { CartComponent } from './pages/cart/cart.component';
 
-const routes:Routes = [
-  { path: '', component: LandingComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'cart', component: CartComponent }, 
+const routes:Routes=[
+  { path:'',component:LandingComponent },
+  { path:'products',component:ProductsComponent },
+  { path:'cart',component:CartComponent }, 
 ];
 
 @NgModule({
