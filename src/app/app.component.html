@@ -1,4 +1,5 @@
-<nav class="flex items-center justify-start bg-gray-800 px-5 py-3 text-white font-semibold gap-8">
+
+<nav *ngIf="showNavbar" class="flex items-center justify-start bg-gray-800 px-5 py-3 text-white font-semibold gap-8">
   <a routerLink="/" class="flex items-center">
     <img src="assets/logo2.png" alt="TechStore Logo" class="h-10 w-auto" />
   </a>
@@ -13,10 +14,7 @@
     Products
   </a>
 
-  <a routerLink="/about" routerLinkActive="active" 
-     class="text-cyan-400 hover:text-cyan-300 text-lg no-underline">
-    About
-  </a>
+  
 
   <div class="ml-auto flex items-center gap-4 text-lg">
     <div class="flex items-center gap-2">
@@ -32,7 +30,15 @@
         {{ cartItems.length }}
       </span>
     </a>
+    <button
+    *ngIf="currentUser"
+    (click)="signOut()"
+    class="ml-4 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-100 transition"
+  >
+    Sign Out
+  </button>
   </div>
 </nav>
 
 <router-outlet></router-outlet>
+

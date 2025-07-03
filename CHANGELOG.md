@@ -27,6 +27,13 @@ Learning Git Commands: I learned essential Git commands for version control, git
 .gitignore Configuration:Added a .gitignore file to exclude unnecessary files and folders (like node_modules, build outputs, and environment files) from being pushed to the repository, keeping it clean.
 Documentation Updates: Included progress updates and task descriptions within the repository’s README file to keep the project well-documented, as was required from me.
 
+Task 6: Create at Least Two Reusable Components
+Refactored the app by creating reusable Angular components: a ProductCardComponent to display individual product details, and a parent component to manage and render the product list. Implemented data passing from parent to child using @Input() to supply product information, and used @Output() with EventEmitter in the child to notify the parent when a product is added to the cart.
+
+Task 7: Use Reactive Forms or Template-driven Forms
+Implemented Template-driven Forms specifically in the login page for efficient form handling and validation. Due to limitations with free verions of WordPress hosting (authentication not supported for self-hosted access) so I switched to Firebase Authentication to manage user login.I applied an Authentication Guard that restricts access to all pages until the user logs in. Additionally, added a Sign Out button in the navigation bar that lredirects the user to the login page.
+
+Task 8: Add Basic Error Handling
 
 
 
