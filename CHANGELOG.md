@@ -32,8 +32,12 @@ Refactored the app by creating reusable Angular components: a ProductCardCompone
 
 Task 7: Use Reactive Forms or Template-driven Forms
 Implemented Template-driven Forms specifically in the login page for efficient form handling and validation. Due to limitations with free verions of WordPress hosting (authentication not supported for self-hosted access) so I switched to Firebase Authentication to manage user login.I applied an Authentication Guard that restricts access to all pages until the user logs in. Additionally, added a Sign Out button in the navigation bar that lredirects the user to the login page.
+https://wordpress.com/support/plugins
 
 Task 8: Add Basic Error Handling
+Basic error handling was implemented in  (products.component.ts) within the subscription to the product fetching service. When a network request fails, the error callback give a user-friendly toast message informing the user that products could not be loaded. This was tested by simulating network failures like disconnecting the internet or using an invalid API URL and verifying that the error message appeared appropriately without breaking the app or causing console errors.
+
+
 
 
 
